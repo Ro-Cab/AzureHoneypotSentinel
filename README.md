@@ -162,7 +162,7 @@ SecurityEvent
 
 _These help you track attacker activity in real time._
 
-<img width="2844" height="907" alt="image" src="https://github.com/user-attachments/assets/fc6c894a-a3ec-4a2b-a384-12ad92151baa" />
+<img width="2617" height="1123" alt="image" src="https://github.com/user-attachments/assets/d15f02c1-fa3d-4bde-b50f-a27b791e5556" />
 
 _KQL results showing failed login attempts._
 
@@ -172,7 +172,7 @@ _KQL results showing failed login attempts._
 Downloaded the GeoIP summary CSV and created a watchlist named “geoip” in Sentinel. Configuration -> Watchlists  
 Set the name and alias as geoip, uploaded the file, and set Network as the key column to enable IP-to-location mapping.
 
-<img width="2846" height="1278" alt="image" src="https://github.com/user-attachments/assets/6b36eb40-cc55-4553-9fa1-aa6fc9ed7602" />
+<img width="2513" height="804" alt="image" src="https://github.com/user-attachments/assets/d03ef110-b463-43b1-9693-691f0966de48" />
 
 _Watchlist upload complete with record count._
 
@@ -184,5 +184,7 @@ Removed default visuals, added a query, pasted the provided JSON code for the gl
 Saved as “Windows VM Attack Map” to view live attack sources mapped geographically.
 Live data was now being plotted by region as attackers attempted to connect to the honeypot. 
 
-![Uploading image.png…]()
+<img width="2846" height="1278" alt="image" src="https://github.com/user-attachments/assets/6b36eb40-cc55-4553-9fa1-aa6fc9ed7602" />
+_Sentinel attack map showing live global attack data._
+
 <div/>
