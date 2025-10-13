@@ -129,9 +129,58 @@ Waited 20–40 minutes for logs to ingest.
 In Log Analytics → Logs, ran the query: <br>
 
 SecurityEvent
-
 <br>
 
 _(This query retrieves Windows Security Log data from the Log Analytics workspace)_
-If results appear, your VM’s logs are being forwarded successfully.
+<br>
+Results appeared, which confimred my VM’s logs were being forwarded successfully.
 
+<img width="975" height="456" alt="image" src="https://github.com/user-attachments/assets/63dd0bec-2852-46d9-8abd-467719d0ce27" />
+
+_SecurityEvent query showing incoming data._
+
+
+--- 
+
+
+## 🔍 Step 13 - Analyze Logs with KQL  
+Used following queries in the Log Analytics workspace:
+
+**Show all failed logins:**  <br>
+SecurityEvent <br>
+| where EventID == 4625
+
+
+**Show recent failed attempts only**:
+<br>
+SecurityEvent
+<br>| where EventID == 4625
+<br>| where TimeGenerated > ago(5m)
+<br>| project TimeGenerated, Account, IPAddress, Computer
+
+
+_These help you track attacker activity in real time._
+
+<img width="975" height="420" alt="image" src="https://github.com/user-attachments/assets/6e9d76ed-f4a3-4a6e-b167-acef63c8e57e" />
+
+_KQL results showing failed login attempts._
+
+---
+
+## 🌍 Step 14 - Import GeoIP Watchlist  
+Downloaded the GeoIP summary CSV and created a watchlist named “geoip” in Sentinel. Configuration -> Watchlists  
+Set the name and alias as geoip, uploaded the file, and set Network as the key column to enable IP-to-location mapping.
+
+<img width="975" height="314" alt="image" src="https://github.com/user-attachments/assets/6ba7e906-b0a8-45ec-b0d0-6b8608416a10" />
+
+_Watchlist upload complete with record count._
+
+---
+
+## 🗺️ Step 15 - Build the Global Attack Map  
+Opened Sentinel Workbooks → Add Workbook.  
+Removed default visuals, added a query, pasted the provided JSON code for the global attack map.  
+Saved as “Windows VM Attack Map” to view live attack sources mapped geographically.
+Live data was now being plotted by region as attackers attempted to connect to the honeypot. 
+
+![Sentinel attack map showing live global attack data.](./media/image16.png)
