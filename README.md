@@ -1,6 +1,7 @@
 # Azure Honeypot Monitoring w/ Sentinel
 
-
+<div align="center">
+   
 ## 🧩 Step 1 - Create a Free Azure Account  
 Started at the Azure Free Trial page and registered with a personal email. A credit card was required for verification, but received free credits upon setup. Signed into the Azure portal to begin configuration.
 
@@ -23,10 +24,10 @@ _Resource group and vnet created_
 ## 💻 Step 3 - Deploy the Honeypot VM  
 Created a new Virtual Machine under RG-SOC-LAB2, named CORP-NET-EAST2.  
 Chose Windows 10 as the image, set size to Standard B2s.  
-Set the username to labuser and password to Password123!.  
+Set the username to _labuser_ and password to _Password123!_.  
 For networking, chose VNET-SOC-LAB2, enabled Public IP, disabled boot diagnostics. Completed the deployment.
 
-<img width="975" height="441" alt="image" src="https://github.com/user-attachments/assets/055d7e4c-4845-4589-91a1-9017e4a72476" />
+<img width="787" height="356" alt="image" src="https://github.com/user-attachments/assets/bbb3b3c2-647d-4645-b57b-4cd8ab0d3f0e" />
 
 _Newly created VM overview_
 
@@ -184,3 +185,4 @@ Saved as “Windows VM Attack Map” to view live attack sources mapped geograph
 Live data was now being plotted by region as attackers attempted to connect to the honeypot. 
 
 ![Sentinel attack map showing live global attack data.](./media/image16.png)
+<div/>
