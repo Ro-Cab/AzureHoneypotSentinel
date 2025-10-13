@@ -53,7 +53,7 @@ _NSG inbound rule settings with “Allow Any” rule._
 ---
 
 ## 🔑 Step 5 - Connect to the VM  
-Opened Remote Desktop Connection (mstsc) with VM’s public IP, logged in using labuser and password.  
+Opened Remote Desktop Connection with VM’s public IP, logged in using labuser and password.  
 Inside the VM, ran wf.msc and disabled Windows Defender Firewall on Domain, Private, and Public profiles.
 
 <img width="2726" height="1520" alt="image" src="https://github.com/user-attachments/assets/a8ab02db-0ffd-4cb2-a985-34b28b58f9bb" />
@@ -63,7 +63,7 @@ _Windows Firewall settings turned off._
 ---
 
 ## 📡 Step 6 - Verify Internet Access  
-From the local computer, opened command prompt and pinged the public IP of the VM (`ping <68.220.176.6>`).  
+From the local computer, opened command prompt and pinged the public IP of the VM (_ping <68.220.176.6>_).  
 Received replies, confirming the VM is exposed and live.
 
 <img width="2503" height="1197" alt="image" src="https://github.com/user-attachments/assets/825bf75c-5113-4645-83ba-cad94926ac8e" />
@@ -83,7 +83,7 @@ _Attempting to RDP into VM with incorrect credentials_
 
 ## 🔍 Step 8 - Review Windows Security Logs  
 Inside the VM, opened Event Viewer → Windows Logs → Security.  
-Looked for Event ID 4625 (failed login attempts) for both test and future attacks.
+Looked for Event ID 4625 (failed login attempts) to observe failed attempts.
 
 <img width="2507" height="1632" alt="image" src="https://github.com/user-attachments/assets/25d057f6-166c-4f3c-8428-95cbc8b711c0" />
 
@@ -92,7 +92,7 @@ _Event Viewer showing failed logins (Event ID 4625)._
 ---
 
 ## 📊 Step 9 - Create a Log Analytics Workspace  
-Back in the Azure portal, created Log Analytics Workspace named law-soc-lab, used rg-soc-lab and East US 2 region.  
+Back in the Azure portal, created Log Analytics Workspace named LAW-SOC-LAB2, used RG-SOC-LAB2 and East US 2 region.  
 This workspace is used to store VM logs for analysis.
 
 <img width="2514" height="741" alt="image" src="https://github.com/user-attachments/assets/2bca84a3-bae9-485b-96cc-5f5e227ab79d" />
@@ -102,8 +102,8 @@ _Log Analytics workspace summary page._
 ---
 
 ## 🧠 Step 10 - Deploy Microsoft Sentinel  
-Searched for Microsoft Sentinel in Azure, created and linked it to the law-soc-lab workspace.  
-Activated Sentinel to start collecting and analyzing lab data.
+Searched for Microsoft Sentinel in Azure, created and linked it to the LAW-SOC-LAB2 workspace.  
+Activated Sentinel (SIEM) to start collecting and analyzing lab data.
 
 <img width="2519" height="922" alt="image" src="https://github.com/user-attachments/assets/0007c1f3-6c9f-4713-80a4-ce7192f67d04" />
 
@@ -113,7 +113,7 @@ _Sentinel setup linked to Log Analytics Workspace._
 
 ## 🔌 Step 11 - Connect the VM to Sentinel  
 Inside Sentinel, opened Content Hub and installed “Windows Security Events via AMA.”  
-Created a Data Collection Rule (DCR), named it DCR-Windows-Logs2, assigned it to rg-soc-lab, and selected the VM to collect all security events.
+Created a Data Collection Rule (DCR), named it DCR-Windows-Logs2, assigned it to RG-SOC-LAB2, and selected the VM to collect all security events.
 
 <img width="2621" height="1234" alt="image" src="https://github.com/user-attachments/assets/30733e2f-f2fd-43dd-987f-24526a2b909b" />
 
