@@ -136,7 +136,7 @@ _(This query retrieves Windows Security Log data from the Log Analytics workspac
 <br>
 Results appeared, which confimred my VM’s logs were being forwarded successfully.
 
-<img width="2733" height="1160" alt="image" src="https://github.com/user-attachments/assets/79a5f900-418a-4edc-8c4b-84977f41f713" />
+<img width="2824" height="1288" alt="image" src="https://github.com/user-attachments/assets/14265f83-55a9-4d00-95c9-aac421d550c3" />
 
 _SecurityEvent query showing incoming data._
 
