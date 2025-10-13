@@ -185,6 +185,7 @@ Saved as “Windows VM Attack Map” to view live attack sources mapped geograph
 Live data was now being plotted by region as attackers attempted to connect to the honeypot. 
 
 <img width="2846" height="1278" alt="image" src="https://github.com/user-attachments/assets/6b36eb40-cc55-4553-9fa1-aa6fc9ed7602" />
+
 _Sentinel attack map showing live global attack data._
 
 <div/>
