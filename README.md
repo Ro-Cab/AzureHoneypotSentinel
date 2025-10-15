@@ -28,8 +28,12 @@ Finally, the results were visualized in a custom Sentinel workbook displaying a 
 - <b>Azure Monitor Agent (AMA)</b>           - Forwards security logs from the VM to Sentinel
 - <b>Windows Event Viewer</b>                - Inspecting local security events
 
+<p align="center"><em>Thanks to <a href="https://www.youtube.com/c/JoshMadakor">Josh Madakor</a> for providing initial walkthrough as well as the following files:</em></p>
+
+
 <div align="center">
-    
+
+
 [geoip csv](https://raw.githubusercontent.com/joshmadakor1/lognpacific-public/refs/heads/main/misc/geoip-summarized.csv) <br>
 [map.json](https://drive.google.com/file/d/1ErlVEK5cQjpGyOcu4T02xYy7F31dWuir/view)
 
