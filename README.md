@@ -27,7 +27,14 @@ Finally, the results were visualized in a custom Sentinel workbook displaying a 
 - <b>Azure Log Analytics Workspace</b>       - Centralized log repository
 - <b>Azure Monitor Agent (AMA)</b>           - Forwards security logs from the VM to Sentinel
 - <b>Windows Event Viewer</b>                - Inspecting local security events
+
+<div align="center">
     
+[GeoIP csv](https://raw.githubusercontent.com/joshmadakor1/lognpacific-public/refs/heads/main/misc/geoip-summarized.csv) <br>
+[MAP.JSON](https://drive.google.com/file/d/1ErlVEK5cQjpGyOcu4T02xYy7F31dWuir/view)
+
+</div>
+
 <h2>:globe_with_meridians: Environments Used </h2>
 
 - <b>Windows 10 (Azure VM)</b>          - Honeypot host
