@@ -30,8 +30,8 @@ Finally, the results were visualized in a custom Sentinel workbook displaying a 
 
 <div align="center">
     
-[GeoIP csv](https://raw.githubusercontent.com/joshmadakor1/lognpacific-public/refs/heads/main/misc/geoip-summarized.csv) <br>
-[MAP.JSON](https://drive.google.com/file/d/1ErlVEK5cQjpGyOcu4T02xYy7F31dWuir/view)
+[geoip csv](https://raw.githubusercontent.com/joshmadakor1/lognpacific-public/refs/heads/main/misc/geoip-summarized.csv) <br>
+[map.json](https://drive.google.com/file/d/1ErlVEK5cQjpGyOcu4T02xYy7F31dWuir/view)
 
 </div>
 
