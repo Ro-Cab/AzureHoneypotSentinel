@@ -1,4 +1,46 @@
-# Azure Honeypot Monitoring w/ Sentinel
+# 💻 Azure Honeypot Monitoring w/ Sentinel
+
+<h2>📘 Description</h2>
+
+This project demonstrates how to build a fully functional cloud-based Security Operations Center (SOC) using Microsoft Azure and Microsoft Sentinel.
+It walks through deploying a Windows honeypot virtual machine, exposing it to real-world Internet traffic, collecting attacker logs, and visualizing global intrusion attempts in a live attack map dashboard.
+The goal is to simulate real security monitoring and log analysis workflows, perfect for learning SIEM fundamentals, Azure security, and Kusto Query Language (KQL).
+
+<br />
+
+<h2>🌐 Overview</h2>
+
+The lab is designed to mimic a simplified enterprise SOC environment entirely within Azure’s free tier.
+You’ll begin by setting up a Windows VM as a honeypot and intentionally opening it to inbound traffic.
+As attackers begin scanning and attempting logins, their activity is captured and forwarded into an Azure Log Analytics Workspace, which feeds into Microsoft Sentinel for SIEM analysis.
+You’ll use KQL to query failed login events (Event ID 4625), enrich them with GeoIP data, and display their origins on a real-time global attack map.
+
+This project provides hands-on experience in:
+
+Cloud-based threat monitoring and logging
+
+Data analysis using KQL
+
+Building dashboards and custom workbooks in Sentinel
+
+Understanding how exposed systems are targeted on the Internet
+
+<h2>:toolbox: Languages and Utilities Used </h2>
+
+- <b>Kusto Query Language (KQL) </b>         - Querying and filtering security logs in Sentinel
+- <b>Microsoft Azure </b>                    - Primary cloud platform
+- <b>Microsoft Sentinel</b>                  - SIEM for log collection and visualization
+- <b>Azure Log Analytics Workspace</b>       - Centralized log repository
+- <b>Azure Monitor Agent (AMA)</b>           - Forwards security logs from the VM to Sentinel
+- <b>Windows Event Viewer</b>                - Inspecting local security events
+    
+<h2>:globe_with_meridians: Environments Used </h2>
+
+- <b>Windows 10 (Azure VM)</b>          - Honeypot host
+- <b>Windows (Local)</b>                - For management and remote access
+- <b>Azure Portal</b>                   - Central management interface
+
+<h2>🧭 Program walk-through:</h2>
 
 <div align="center">
    
