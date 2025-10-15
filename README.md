@@ -25,6 +25,7 @@ Finally, the results were visualized in a custom Sentinel workbook displaying a 
 - <b>Microsoft Azure </b>                    - Primary cloud platform
 - <b>Microsoft Sentinel</b>                  - SIEM for log collection and visualization
 - <b>Azure Log Analytics Workspace</b>       - Centralized log repository
+- <b>Network Security Group (NSG)</b>        - Configured to control and expose inbound network traffic to the honeypot VM
 - <b>Azure Monitor Agent (AMA)</b>           - Forwards security logs from the VM to Sentinel
 - <b>Windows Event Viewer</b>                - Inspecting local security events
 
