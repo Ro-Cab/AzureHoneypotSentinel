@@ -1,6 +1,6 @@
 
 
-### 🔍 Show all failed logins
+### 🔍 Show all failed logins (KQL)
 ```kql
 SecurityEvent
 | where EventID == 4625
@@ -14,7 +14,7 @@ where EventID == 4625 → Filters for Event ID 4625, which represents failed log
 ```
 
 
-### ⏱️ Show recent failed attempts only
+### ⏱️ Show recent failed attempts only (KQL)
 ```
 SecurityEvent
 | where EventID == 4625
@@ -34,3 +34,4 @@ Account → Username used in the attempt
 IPAddress → Source IP of the login attempt
 Computer → Target system that logged the event
 ```
+
