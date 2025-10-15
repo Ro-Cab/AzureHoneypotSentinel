@@ -2,29 +2,23 @@
 
 <h2>📘 Description</h2>
 
-This project demonstrates how to build a fully functional cloud-based Security Operations Center (SOC) using Microsoft Azure and Microsoft Sentinel.
-It walks through deploying a Windows honeypot virtual machine, exposing it to real-world Internet traffic, collecting attacker logs, and visualizing global intrusion attempts in a live attack map dashboard.
-The goal is to simulate real security monitoring and log analysis workflows, perfect for learning SIEM fundamentals, Azure security, and Kusto Query Language (KQL).
+This project demonstrates how to build a cloud-based security monitoring environment using Microsoft Azure and Microsoft Sentinel. It guides you through deploying a single Windows honeypot virtual machine, exposing it to real-world Internet traffic, collecting attacker logs, and visualizing intrusion attempts in a live attack map dashboard. While not a full SOC, it simulates real security monitoring and log analysis workflows, making it ideal for learning SIEM fundamentals, Azure security, and Kusto Query Language (KQL).
 
-<br />
+<h2>🖼️ Overview</h2>
+    
+First, a Windows 10 virtual machine was deployed inside an Azure Resource Group and connected to a Virtual Network (VNet). Its Network Security Group (NSG) was left open to the public Internet, allowing real attackers and bots to attempt connections. <br>
+The VM’s security logs were collected through a Data Collection Rule (DCR) using the Azure Monitor Agent (AMA) and sent to an Azure Log Analytics Workspace.  
+This workspace was linked to Microsoft Sentinel, where I used Kusto Query Language (KQL) to analyze failed login events and enrich them with GeoIP data. <br>
+Finally, the results were visualized in a custom Sentinel workbook displaying a global attack map, showing where intrusion attempts originated in real time.
 
-<h2>🌐 Overview</h2>
-
-The lab is designed to mimic a simplified enterprise SOC environment entirely within Azure’s free tier.
-You’ll begin by setting up a Windows VM as a honeypot and intentionally opening it to inbound traffic.
-As attackers begin scanning and attempting logins, their activity is captured and forwarded into an Azure Log Analytics Workspace, which feeds into Microsoft Sentinel for SIEM analysis.
-You’ll use KQL to query failed login events (Event ID 4625), enrich them with GeoIP data, and display their origins on a real-time global attack map.
-
-This project provides hands-on experience in:
-
-Cloud-based threat monitoring and logging
-
-Data analysis using KQL
-
-Building dashboards and custom workbooks in Sentinel
-
-Understanding how exposed systems are targeted on the Internet
-
+<div align="center">
+    
+<img width="1813" height="864" alt="image" src="https://github.com/user-attachments/assets/dad9a899-b416-472d-8510-bb4a88b7b225" />
+    
+ _The diagram shows how the Azure Sentinel Honeypot Lab was structured._  
+    
+</div>
+    
 <h2>:toolbox: Languages and Utilities Used </h2>
 
 - <b>Kusto Query Language (KQL) </b>         - Querying and filtering security logs in Sentinel
